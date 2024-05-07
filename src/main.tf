@@ -11,7 +11,6 @@ module "vpc" {
 
   enable_nat_gateway   = true
   enable_vpn_gateway   = true
-  enable_dns_hostnames = true
 
   tags = merge(var.aws_project_tags, { "kubernetes.io/cluster/${var.aws_eks_name}" = "shared" })
 
@@ -32,6 +31,7 @@ module "eks" {
 
   cluster_name    = var.aws_eks_name
   cluster_version = var.aws_eks_version
+  enable_cluster_creator_admin_permissions = true
 
   subnet_ids                     = module.vpc.private_subnets
   vpc_id                         = module.vpc.vpc_id
