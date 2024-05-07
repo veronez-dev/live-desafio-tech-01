@@ -36,24 +36,24 @@ variable "aws_vpc_public_subnets" {
 
 variable "aws_project_tags" {
   description = "Tags do projeto"
-  type        = map
+  type        = map(any)
   nullable    = false
 }
 
 variable "aws_eks_name" {
-    description = "Nome do cluster EKS"
+  description = "Nome do cluster EKS"
   type        = string
   nullable    = false
 }
 
 variable "aws_eks_version" {
-    description = "Versão do cluster Kubernetes"
+  description = "Versão do cluster Kubernetes"
   type        = string
   nullable    = false
 }
 
 variable "eks_managed_node_groups_instance_types" {
-    description = "Versão do cluster Kubernetes"
+  description = "Versão do cluster Kubernetes"
   type        = set(string)
   nullable    = false
 }
