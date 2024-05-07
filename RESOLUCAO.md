@@ -57,5 +57,6 @@ Explicação do Fluxo
 Algumas evoluções que sugiro para o projeto:
 
 + Separar ambientes dev, homolog e prod utilizando o Terraform Workspace ou Terraform Grunt para criação e gerenciamento desses ambientes.
++ Usar o DynamoDB junto com o S3 para evitar execução paralela do Terraform.
 
 ...
