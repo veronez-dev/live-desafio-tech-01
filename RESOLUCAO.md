@@ -41,9 +41,13 @@ A pipeline de criação ou atualização do projeto é executada sempre que o c�
 As variáveis de configuração do projeto estão no arquivo terraform.tfvars, exceto as variáveis consideradas sensiveis que estão no gerenciador de secrets do GitHub Actions.
 
 **Variáveis armazendas em secrets:**
+
 AWS_ACCESS_KEY_ID => Access Key utilizada para configurar o AWS CLI.
+
 AWS_SECRET_ACCESS_KEY => Secret access Key utilizada para configurar o AWS CLI.
+
 AWS_BUCKET_NAME => Nome do Bucket utilizado para armazenar o estado do projeto Terraform.
+
 AWS_BUCKET_FILE => Nome do arquivo utilizado para armazenar o estado do projeto Terraform.
 
 ## Estrutura da solução
